@@ -1,9 +1,9 @@
-%Loading required data from Wind Turbine one
+% Loading required data from Wind Turbine one
 
 %% Initialization
 clear ; close all; clc
 
-WT1_Data = csvread('train.csv'); % contains 60% of data
+WT1_Data = csvread('train.csv', 1, 0);
 shuffled_activeP = WT1_Data(2:end,2);
 shuffled_ambientTemp = WT1_Data(2:end,3);
 shuffled_hydraulicOilTemp = WT1_Data(2:end,4);

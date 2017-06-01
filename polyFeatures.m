@@ -20,7 +20,7 @@ for i = 1:size(X,1)
   for k = 1:size(X,2)
       for j = 1:p
         X_poly(i,c) = X(i,k).^j;
-        c++;
+        c = c+1;
       end
   end
 end
