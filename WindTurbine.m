@@ -42,15 +42,18 @@ X_poly_default = polyFeatures(X_default, p);
 
 %Number of rows of all features
 n = size(X_default,1);
+train_n = ceil(0.6 * n)
+not_train_n = ceil((n - train_n) / 2)
+val_n = train_n+not_train_n
 %m= size(X,1);
 
 %Assign traning, validation and testing data set
-X = [X_poly_default(1:3391,:)];  
-y = apparentP(1:3391,:);
-Xval  = [X_poly_default(3392:4521,:)];     
-yval = apparentP(3392:4521,:);
-Xtest = [X_poly_default(4522:n,:)];   
-ytest = apparentP(4522:n,:);
+X = [X_poly_default(1:train_n,:)];  
+y = apparentP(1:train_n,:);
+Xval  = [X_poly_default((train_n+1):(val_n),:)];     
+yval = apparentP((train_n+1):(val_n),:);
+Xtest = [X_poly_default((val_n+1):n,:)];   
+ytest = apparentP((val_n+1):n,:);
 
 
 
