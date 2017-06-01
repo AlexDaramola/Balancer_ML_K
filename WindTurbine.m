@@ -3,20 +3,20 @@
 %% Initialization
 clear ; close all; clc
 
-WT1_Data = csvread('train.csv', 1, 0);
-shuffled_activeP = WT1_Data(2:end,2);
-shuffled_ambientTemp = WT1_Data(2:end,3);
-shuffled_hydraulicOilTemp = WT1_Data(2:end,4);
-shuffled_phaseCurrentA = WT1_Data(2:end,5);
-shuffled_phaseCurrentB = WT1_Data(2:end,6);
-shuffled_phaseCurrentC = WT1_Data(2:end,7);
-shuffled_phaseVoltageA = WT1_Data(2:end,8);
-shuffled_phaseVoltageB = WT1_Data(2:end,9);
-shuffled_phaseVoltageC = WT1_Data(2:end,10);
-shuffled_reactiveP = WT1_Data(2:end,11);
-shuffled_turbineStatus = WT1_Data(2:end,11);
-shuffled_windD = WT1_Data(2:end,13);
-shuffled_windS = WT1_Data(2:end, 14);
+turbine_data = csvread('turbines.csv', 1, 0);
+shuffled_activeP = turbine_data(2:end,2);
+shuffled_ambientTemp = turbine_data(2:end,3);
+shuffled_hydraulicOilTemp = turbine_data(2:end,4);
+shuffled_phaseCurrentA = turbine_data(2:end,5);
+shuffled_phaseCurrentB = turbine_data(2:end,6);
+shuffled_phaseCurrentC = turbine_data(2:end,7);
+shuffled_phaseVoltageA = turbine_data(2:end,8);
+shuffled_phaseVoltageB = turbine_data(2:end,9);
+shuffled_phaseVoltageC = turbine_data(2:end,10);
+shuffled_reactiveP = turbine_data(2:end,11);
+shuffled_turbineStatus = turbine_data(2:end,11);
+shuffled_windD = turbine_data(2:end,13);
+shuffled_windS = turbine_data(2:end, 14);
 
 
 
